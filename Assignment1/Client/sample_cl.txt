@@ -1,1 +1,14 @@
 Client file
+
+This is a client file eisting the client folder. You can verify by giving the  
+absolute path of this file with UPD.
+
+It simply indicates that the cient is trying to upload the file to the server.
+
+You can also upload any file. But this is just  check sampple.
+
+Also, If you give inappropriate file path, File will not be inserted.
+
+Note that I used status Ok as my end of the file. Actually (status Ok)end of the file should not be there in the text.
+
+For  more details, please refer the design doc.

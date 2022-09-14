@@ -1,1 +1,14 @@
 Server file
+
+This is a server file eisting the server folder. You can verify by giving the  
+absolute path of this file with DWD.
+
+It simply indicates that the cient is trying to download the file from the server.
+
+You can also download any file. But this is just check sample.
+
+Also, If you give inappropriate file path, File will not be inserted.
+
+Note that I used status Ok as my end of the file. Actually (status Ok)end of the file should not be there in the text.
+
+For  more details, please refer the design doc.

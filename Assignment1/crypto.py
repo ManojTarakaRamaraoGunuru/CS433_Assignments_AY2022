@@ -46,6 +46,8 @@ def encrypt(string,opt,val=2):
                     temp += chr((ord(string[r])+val -65)%26 + 65)
                 elif string[r].islower():
                     temp += chr((ord(string[r])+val -97)%26 + 97)
+                else:
+                    temp+=string[r]
                 r += 1
         ans+=temp
         return ans
