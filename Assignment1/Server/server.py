@@ -9,7 +9,7 @@ import crypto
 
 BUFFER_SIZE = 1024
 SEPARATOR = "<SEPARATOR>"
-port = 11298
+port = 11299
 
 s = s.socket(s.AF_INET, s.SOCK_STREAM)
 print("Socket created! ")

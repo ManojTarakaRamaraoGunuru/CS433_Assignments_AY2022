@@ -7,7 +7,7 @@ sys.path.append("/home/kali/Desktop/CS433_Assignments_AY2022/Assignment1")
 import crypto
 
 BUFFER_SIZE = 1024
-port = 11298
+port = 11299
 
 
 s = s.socket(s.AF_INET, s.SOCK_STREAM)

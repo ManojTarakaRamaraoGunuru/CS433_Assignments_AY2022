@@ -22,7 +22,7 @@ def reverse(s):
     return ans
 
 
-def encrypt(string,opt,val=2):
+def encrypt(string,opt,val=2,flag=0):
     if opt == 1:
         return string
     elif opt == 2:
@@ -46,6 +46,11 @@ def encrypt(string,opt,val=2):
                     temp += chr((ord(string[r])+val -65)%26 + 65)
                 elif string[r].islower():
                     temp += chr((ord(string[r])+val -97)%26 + 97)
+                elif string[r].isdigit() and flag==0:
+                    temp += chr((ord(string[r])+val -ord('0'))%10 + ord('0'))
+                elif string[r].isdigit() and flag==1:
+                    val = -2
+                    temp += chr((ord(string[r])+val -ord('0'))%10 + ord('0'))
                 else:
                     temp+=string[r]
                 r += 1
@@ -57,7 +62,7 @@ def encrypt(string,opt,val=2):
     
 
 def decrypt(string,opt,val = 24):
-    return encrypt(string, opt, val)
+    return encrypt(string, opt, val, 1)
 
 # Check the helper functions by uncommenting this
 # a = "   Server filestatus ok  \n\n p"
