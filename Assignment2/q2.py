@@ -22,7 +22,7 @@ class MyTopo( Topo ):
         self.addLink(A, R1, cls = TCLink, bw = 1000, delay = '1ms')
         self.addLink(D, R1, cls = TCLink, bw = 1000, delay = '1ms')
         self.addLink(B, R2, cls = TCLink, bw = 1000, delay = '1ms')
-        self.addLink(C, R2, cls = TCLink, bw = 1000, delay = '1ms')
+        self.addLink(C, R2, cls = TCLink, bw = 1000, delay = '5ms')
         self.addLink(R1, R2, cls = TCLink, bw = 500, delay = '10ms')
 
 def Test():
