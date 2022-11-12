@@ -1,7 +1,7 @@
 from mininet.topo import Topo
 from mininet.net import Mininet
 from mininet.util import dumpNodeConnections
-
+from mininet.cli import CLI
 
 
 class MyTopo( Topo ):
@@ -12,12 +12,10 @@ class MyTopo( Topo ):
         lh = self.addHost('h1')
         rh = self.addHost('h2')
         ls = self.addSwitch('s1')
-        rs = self.addSwitch('s2')
 
         #add links
         self.addLink(lh, ls)
-        self.addLink(ls, rs)
-        self.addLink(rs, rh)
+        self.addLink(ls, rh)
 
 def Test():
     topo = MyTopo()
@@ -25,7 +23,7 @@ def Test():
     net.start()
     print("Dumping host connections")
     dumpNodeConnections(net.hosts)
-    net.pingAll()
+    CLI(net)
     net.stop()
 
 if __name__ == '__main__':
